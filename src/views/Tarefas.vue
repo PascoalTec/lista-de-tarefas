@@ -53,7 +53,7 @@ export default {
   methods:{
     handleAddTarefa(){
         this.$store.commit('adicionaTarefa', this.campoInput)
-          this.campoInput = null;
+        this.campoInput = null;
         }
   }
 }

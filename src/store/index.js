@@ -9,8 +9,7 @@ export default new Vuex.Store({
       {id:1, titulo:"Ir ao mercado", concluido:false },
       {id:2, titulo:"Comprar ração", concluido:false },
     ]
-  },
-  getters: {
+    
   },
   mutations: {
     adicionaTarefa(state, titulo){
@@ -20,8 +19,17 @@ export default new Vuex.Store({
           titulo,
           concluido: false
         })
-        this.campoInput = null;
+        
       }
+    },
+    removeTarefa(state, id){
+    state.tarefas = state.tarefas.filter(tarefa => tarefa.id != id)
+    },
+    editaTarefa(state, novaTarefa){
+      let tarefa = state.tarefas.filter(tarefa => tarefa.id == novaTarefa.id)[0]
+      tarefa.titulo = novaTarefa.titulo;
+     // console.log(state);
+     // console.log(tarefa);
     }
   },
   actions: {
