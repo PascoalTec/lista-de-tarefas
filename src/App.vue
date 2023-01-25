@@ -1,15 +1,24 @@
 <template>
   <v-app id="inspire">
-<!--     <v-navigation-drawer
-      v-model="drawer"
-      app
-    > -->
-      <!--  -->
-    <!--/v-navigation-drawer> -->
+
     <v-navigation-drawer
     v-model="drawer"
     app
     >
+    <v-img
+    src="./assets/bg.jpg"
+    gradient="to top right, rgba(19,84,122,.5), rgba(28,108,199,.8)"
+    dark
+    class="pt-5 text-center"
+    >
+    <v-avatar
+    size="100"
+    >
+      <img
+        src="https://mail.google.com/mail/u/0?ui=2&ik=ba9bd541b8&attid=0.1&permmsgid=msg-a:r4528135427147176668&th=1846c8d71fe0df7c&view=fimg&realattid=1846c8ce818d198d6662&disp=thd&attbid=ANGjdJ945ZTHr99wmuzfBoRlO1KFXnsFXLzY5EgN8USHnk7CVvZ_sqYPQPyfmh8Qv2IMwn-paXn4uEhJRf6FirG2xqUhrR4_yhIaSVJ9o7cfYS4foLUiEN4p-SctSlU&ats=2524608000000&sz=w1920-h913"
+        alt="John"
+      >
+    </v-avatar>
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title class="text-h6">
@@ -20,7 +29,7 @@
           </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
-
+    </v-img>
       <v-divider></v-divider>
 
       <v-list
@@ -43,14 +52,10 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <!-- <v-app-bar app>
-      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-
-      <v-toolbar-title>Application</v-toolbar-title>
-    </v-app-bar> -->
     <v-app-bar
       app
       prominent
+      height="180"
       color="#fcb69f"
       dark
       src="./assets/bg.jpg"
@@ -64,21 +69,14 @@
 
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-app-bar-title>Title</v-app-bar-title>
-
-      <v-spacer></v-spacer>
-
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn>
+      <center>
+        <v-app-bar-title
+        class="mt-2"
+      >
+        Title
+        <inputTarefa />
+        </v-app-bar-title>
+      </center>
     </v-app-bar>
 
     <v-main>
@@ -88,8 +86,10 @@
 </template>
 
 <script>
+import inputTarefa from './components/inputTarefa.vue'
 
   export default {
+  components: { inputTarefa },
     data: () => ({
             drawer: null,
             items: [

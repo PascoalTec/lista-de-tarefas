@@ -47,7 +47,7 @@
       },
       methods:{
         handleDeleta(){
-          this.$store.commit('removeTarefa', this.tarefa.id);
+          this.$store.dispatch('removeTarefa', this.tarefa.id);
           this.$emit('fechaModal');
         }
       }
