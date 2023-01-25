@@ -2,7 +2,7 @@
   <div>
     <lista-de-tarefas />
   <div
-  v-if="!$store.state.tarefas.lenght"
+  v-if="!$store.state.tarefas.length"
   class="mt-16 animate__animated animate__bounceInUp"
   >
     <center>
