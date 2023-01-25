@@ -1,24 +1,5 @@
-# vue-todo
+Projeto desenvolvido por mim (Leonardo)
 
-## Project setup
-```
-npm install
-```
+neste projeto, usei Vue.Js e vuetify para fazer uma aplicação de Lista de Tarefas e subir para o servidor 8080 no qual eu usei CSS para editar o estilo da página
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+segue link do canal de ajuda : https://www.youtube.com/watch?v=fL2BAYzCIZs&list=PLygIEirBzJi6qaDltMN44zyVHjbqUa4e-&index=1
